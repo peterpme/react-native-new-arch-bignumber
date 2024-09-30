@@ -2,6 +2,30 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { BN } from 'react-native-bignumber'
+
+const a = new BN(3274556)
+const b = new BN(9856712)
+const c = a.mul(b) // 32.276.355.419.872
+console.log("c", c)
+
+function fibonacci(n: number): BN {
+  let prev = new BN(0)
+  let prevPrev = new BN(1)
+  let number = new BN(1)
+
+  for (let i = 1; i < n; i++) {
+    prevPrev = prev
+    prev = number
+    number = prevPrev.add(prev)
+  }
+
+  return number
+}
+
+
+const f = fibonacci(50) // 12.586.269.025
+console.log("f", f.toString())
 
 export default function App() {
   return (
@@ -42,3 +66,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+

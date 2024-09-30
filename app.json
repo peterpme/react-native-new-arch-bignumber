@@ -4,7 +4,7 @@
     "slug": "new-arch-bignumber-test",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.example.with-new-arch"
+      "bundleIdentifier": "com.example.withnewarch"
     },
     "android": {
       "package": "com.example.withnewarch"
